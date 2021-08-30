@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const Team = new Schema({
+const Technician = new Schema({
     category_id: {
         type: Number,
         require: true,
     },
-    name: {
+    Firstname: {
         type: String,
         require: true,
     },
@@ -13,7 +13,23 @@ const Team = new Schema({
         type: String,
         require: true,
     },
-    role: {
+    phoneNo: {
+        type: Number,
+        require: true,
+    },
+    gender: {
+        type: String,
+        require: true,
+    },
+    email: {
+        type: String,
+        require: true,
+    },
+    password: {
+        type: String,
+        require: true,
+    },
+    skill: {
         type: String,
         require: true,
     },
@@ -37,14 +53,15 @@ const Team = new Schema({
         type: Number,
         require: true
     },
-    location: {
+    city: {
         type: String,
         require: true
     },
-    TechnicianId: {
+    zipcode: {
         type: Number,
-        require: true
-    }
+        require: true,
+    },
+
 });
 
-module.exports = mongoose.model("technicians", Team);
+module.exports = mongoose.model("technicians", Technician);
